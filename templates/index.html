@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastInk</title>
+</head>
+<body>
+    <nav class="nav1">
+        <ul class="nav-links">
+            <li id="fast-ink"><a href="/">FastInk</a></li>
+            <div class="right-links">
+                <li class="last2"><a href="/editor">New post</a></li>
+                <li class="last2"><a href="/about">About</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <ul class="flex2">
+        <li id="article1"><h1 id="ARTICLE">LATEST ARTICLES</h1></li>
+        <li id="newpost1"><a href="/editor" style="text-decoration: none;"><button id="newpost">NEW POST</button></a></li>
+    </ul>
+
+    <div id="card1">
+      <ul style="margin: 2% 7%; list-style: none;">
+        {% for blog in blogs %}
+            <li class="blog-card">
+                <h2><a href="/blog/{{ blog.id }}" style="text-decoration: none; color: #111;">{{ blog.title }}</a></h2>
+                <p style="color: #555; margin-top: 5px;">{{ blog.content[:150] }}...</p>
+                <small style="color: #888;">By {{ blog.author }}</small>
+            </li>
+        {% endfor %}
+      </ul>
+    </div>
+</body>
+</html>

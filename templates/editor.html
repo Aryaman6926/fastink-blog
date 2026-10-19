@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - FastInk</title>
+</head>
+<body>
+     <nav class="nav1">
+        <ul class="nav-links">
+            <li id="fast-ink"><a href="/">FastInk</a></li>
+            <div class="right-links">
+                <li class="last2"><a href="/editor">New post</a></li>
+                <li class="last2"><a href="/about">About</a></li>
+            </div>
+        </ul>
+    </nav>
+
+<h1 id="h1post">Create a post</h1>
+<form action="/blog" method="POST">
+    <div class="label">Title</div>
+    <input type="text" id="title1" name="title" required>
+    
+    <div class="label">Content</div>
+    <textarea id="content1" name="content"></textarea>
+
+    <div class="label">Author</div>
+    <input type="text" id="author1" name="author">
+
+    <ul class="list3">
+        <li><button id="publish" type="submit">Publish</button></li>
+        <li><button id="cancel" type="button"><a href="/" style="text-decoration: none; color: inherit;">Cancel</a></button></li>
+    </ul>
+</form>
+</body>
+</html>

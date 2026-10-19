@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ blog.title if blog else "Post" }} - FastInk</title>
+</head>
+<body>
+    <nav class="nav1">
+        <ul class="nav-links">
+            <li id="fast-ink"><a href="/">FastInk</a></li>
+            <div class="right-links">
+                <li class="last2"><a href="/editor">New post</a></li>
+                <li class="last2"><a href="/about">About</a></li>
+            </div>
+        </ul>
+    </nav>
+    
+    <div style="margin: 5% 7%; font-family: Arial, Helvetica, sans-serif;">
+        {% if blog %}
+            <h1 id="heading3">{{ blog.title }}</h1>
+            <div id="sub">By {{ blog.author }}</div>
+            <div id="maintxt" style="margin-top: 20px;">{{ blog.content }}</div>
+        {% else %}
+            <h1>Post not found</h1>
+        {% endif %}
+        
+        <!-- Bottom right wrapper for Back to Home -->
+        <div style="display: flex; justify-content: flex-end; margin-top: 50px;">
+            <a href="/" style="color: blue; text-decoration: none; font-size: 18px;">&larr; Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
